@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,9 +170,20 @@ input:checked + .slider:before { transform: translateX(22px); }
 hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
 .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
 .checkbox-group input[type="checkbox"] { width: auto; }
+
+.notification-banner { 
+    position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+    background-color: var(--accent); color: white; 
+    padding: 1.5rem 2.5rem; border-radius: 12px; 
+    box-shadow: var(--shadow); z-index: 3000; font-weight: 500; 
+    opacity: 0; visibility: hidden; transition: all 0.3s ease-in-out; 
+}
+.notification-banner.show { opacity: 1; visibility: visible; }
 </style>
 </head>
 <body>
+
+<div id="notification" class="notification-banner"></div>
 
 <div class="top-menu-bar">
     <div class="top-menu-content">
@@ -383,8 +392,7 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURATION ---
-    const ADMIN_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwXfjAXlwhrSj_5COdH_gPNfUnkfReMg8HwJxdT2IooygVDUx71H1lKt2xwC2-8JEB9A/exec
-';
+    const ADMIN_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwXfjAXlwhrSj_5COdH_gPNfUnkfReMg8HwJxdT2IooygVDUx71H1lKt2xwC2-8JEB9A/exec';
 
     // --- STATE ---
     let appConfig = {};
@@ -403,6 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const settingsModal = document.getElementById('settingsModal');
     const loginMessage = document.getElementById('login-message');
     const listingsGrid = document.getElementById('listingsGrid');
+    const notificationBanner = document.getElementById('notification');
 
     // --- INITIALIZATION ---
     function initializeApp() {
@@ -560,7 +569,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             // END MOCK
             
-            loginMessage.textContent = result.message;
+            if(loginMessage) loginMessage.textContent = result.message;
             if (result.status === 'login_success') grantAdminAccess(result.userData);
             else if (result.status === 'setup_required') {
                 closeModal(loginModal);
@@ -569,7 +578,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if(window.triggerConfetti) window.triggerConfetti();
             }
         } catch (error) {
-            loginMessage.textContent = '⚠️ Connection error.';
+            if(loginMessage) loginMessage.textContent = '⚠️ Connection error.';
         } finally {
             hideNotification();
         }
@@ -609,12 +618,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- NOTIFICATIONS ---
     let notificationTimeout;
     function showNotification(message, type = 'info') {
-        const banner = document.getElementById('notification');
-        banner.textContent = message;
-        banner.style.backgroundColor = type === 'error' ? '#e53e3e' : 'var(--accent)';
-        banner.classList.add('show');
+        if (!notificationBanner) return;
+        notificationBanner.textContent = message;
+        notificationBanner.style.backgroundColor = type === 'error' ? '#e53e3e' : 'var(--accent)';
+        notificationBanner.classList.add('show');
         clearTimeout(notificationTimeout);
-        notificationTimeout = setTimeout(() => banner.classList.remove('show'), 3000);
+        notificationTimeout = setTimeout(() => notificationBanner.classList.remove('show'), 3000);
+    }
+    function hideNotification() { 
+        if(notificationBanner) notificationBanner.classList.remove('show'); 
     }
 
     initializeApp();
