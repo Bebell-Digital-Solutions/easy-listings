@@ -638,7 +638,7 @@ document.addEventListener('DOMContentLoaded', function() {
         appConfig = config;
         const brandName = config.brandname || 'Easy Listings';
         appBrandNameDisplay.textContent = brandName;
-        const animationTexts = [`Welcome to ${brandName}`, "Our Listings Page"];
+        const animationTexts = [`${brandName}`, "Our Listings Page"];
         typeWriterAnimation(animationTexts);
         mainHeader.style.backgroundImage = `url(${config.bannerimageurl || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80'})`;
         renderFooter(config);
