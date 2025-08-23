@@ -51,27 +51,51 @@ body {
 }
 .top-menu-bar.hidden { top: -100px; }
 .top-menu-content { height: 70px; display: flex; align-items: center; justify-content: space-between; }
+
+
 .logo-container { display: flex; align-items: center; gap: 1rem; }
+
+
 #appLogo { height: 40px; width: 40px; object-fit: cover; border-radius: 8px; }
+
+
 #appBrandNameDisplay { font-size: 1.5rem; font-weight: 600; color: var(--text); }
+
+
 .top-menu-actions { display: flex; align-items: center; gap: 1rem; }
+
+
+
 .fab {
     width: 40px; height: 40px; border-radius: 50%; background-color: var(--bg);
     color: var(--text); border: 1px solid var(--border-color); display: flex;
     justify-content: center; align-items: center; cursor: pointer; transition: all 0.2s ease;
 }
+
+
+
 .fab:hover { background-color: var(--border-color); }
+
+
 
 .header-banner {
     width: 100%; padding: 170px 2rem 4rem 2rem; text-align: center;
     position: relative; background-size: cover; background-position: center;
     color: white; overflow: hidden;
 }
+
+
+
 .header-banner::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
     background-color: rgba(0,0,0,0.5); z-index: 1;
 }
+
+
+
 .header-content { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; }
+
+
 .admin-greeting {
     background-color: var(--primary); color: white; padding: 8px 20px;
     border-radius: 25px; font-size: 1.5rem; font-weight: 500;
@@ -106,7 +130,7 @@ body {
 
 .listing-section { margin-bottom: 3rem; }
 .section-header { text-align: center; margin-bottom: 2rem; }
-.section-header h2 { font-size: 2rem; color: var(--text); margin-bottom: 0.5rem; }
+.section-header h2 { font-size: 2rem; color: var(--text); margin-bottom: 0.5rem; margin-top: 2rem; }
 .section-header p { font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 0 auto; }
 
 .grid-container {
@@ -121,27 +145,48 @@ body {
     display: flex; flex-direction: column; position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+
+
+
 .card-admin-controls {
     position: absolute; top: 10px; left: 10px; z-index: 3;
     display: none; gap: 8px;
 }
+
+
+
 body.admin-logged-in .card-admin-controls { display: flex; }
+
+
+
 .admin-btn {
     background-color: rgba(0,0,0,0.6); color: white; border: none;
     width: 35px; height: 35px; border-radius: 50%; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
     font-size: 0.9rem; transition: background-color 0.2s;
 }
+
+
+
+
 .admin-btn:hover { background-color: rgba(0,0,0,0.8); }
+
+
 
 .card-carousel {
     position: relative; aspect-ratio: 16 / 10;
     background-color: var(--border-color); overflow: hidden;
 }
+
+
+
 .carousel-track { display: flex; height: 100%; transition: transform 0.5s ease-in-out; }
 .carousel-slide { min-width: 100%; height: 100%; }
 .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
@@ -151,7 +196,7 @@ body.admin-logged-in .card-admin-controls { display: flex; }
     padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
 }
 .card-body { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
-.card-title { font-size: 1.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+.card-title { font-size: 1.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; margin-top: 1rem; }
 .card-subtitle { font-size: 1rem; color: var(--primary); margin-bottom: 1rem; font-weight: 500; }
 .card-description { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem; }
 .card-details-title { font-weight: 600; margin-bottom: 0.75rem; color: var(--text); }
@@ -164,6 +209,9 @@ body.admin-logged-in .card-admin-controls { display: flex; }
 .card-ctas { margin-top: auto; display: flex; gap: 1rem; }
 .card-ctas .btn { flex: 1; border-radius: 8px; }
 
+
+
+
 #getInTouchBlock {
     display: none;
     text-align: center;
@@ -174,6 +222,8 @@ body.admin-logged-in .card-admin-controls { display: flex; }
     box-shadow: var(--shadow);
     max-width: 800px;
 }
+
+
 .get-in-touch-profile-pic {
     width: 120px;
     height: 120px;
@@ -206,16 +256,31 @@ body.admin-logged-in .card-admin-controls { display: flex; }
     font-size: 1.8rem;
     color: var(--text);
     margin-bottom: 1.5rem;
+    margin-top: 1rem;
 }
+
+
+
+
+
 
 #mapContainer { width: 100%; max-width: 1400px; margin: 4rem auto 0 auto; height: 450px; background-color: var(--border-color); border-radius: 12px; }
 #mapContainer iframe { width: 100%; height: 100%; border:0; border-radius: 12px; }
+
+
+
+
 
 .footer { padding: 2rem 1rem; text-align: center; color: var(--text-light); border-top: 1px solid var(--border-color); margin-top: 4rem; }
 .bebell-footer { padding: 20px; font-size: 12px; }
 .bebell-footer p { margin: 0; line-height: 1.6; }
 .bebell-link { color: var(--text-light); text-decoration: none; }
 .bebell-link:hover { color: var(--primary); text-decoration: underline; }
+
+
+
+
+
 
 /* Modal Styles */
 .modal {
@@ -228,13 +293,13 @@ body.admin-logged-in .card-admin-controls { display: flex; }
     width: 90%; max-width: 600px; position: relative; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.2); max-height: 90vh; overflow-y: auto; 
 }
-.modal-content h3 { margin-bottom: 1.5rem; }
-.modal-content h4 { margin-top: 2rem; margin-bottom: 1rem; }
+.modal-content h3 { margin-bottom: 1.5rem; margin-top: 1rem;}
+.modal-content h4 { margin-top: 2rem; margin-bottom: 1.5rem; }
 .modal-close { position: absolute; top: 15px; right: 15px; font-size: 1.5rem; color: var(--text-light); cursor: pointer; }
 .form-group { margin-bottom: 1rem; }
 .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
 .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px; background-color: var(--bg); color: var(--text); }
-.profile-pic-uploader { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.profile-pic-uploader { display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1rem; margin-top: 1rem; }
 .profile-pic-preview { width: 120px; height: 120px; border-radius: 50%; border: 3px dashed var(--primary); display: flex; align-items: center; justify-content: center; cursor: pointer; background-size: cover; background-position: center; color: var(--text-light); }
 .profile-pic-preview i { font-size: 2rem; }
 .profile-pic-uploader input[type="file"] { display: none; }
@@ -252,6 +317,7 @@ input:checked + .slider:before { transform: translateX(22px); }
 hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
 .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; }
 .checkbox-group input[type="checkbox"] { width: auto; }
+.field-instructions { font-size: 0.8rem; color: var(--text-light); margin-top: 5px; }
 
 .notification-banner { 
     position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
@@ -283,7 +349,10 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
         width: 100%;
     }
     .logo-container { max-width: 150px; }
-    #appBrandNameDisplay { font-size: 16px; }
+     #appBrandNameDisplay {
+        font-size: 20px; /* Fixed 20px size on mobile */
+        max-width: 150px;
+    }
     #supportBtn { display: none; }
 
     .tag-filters {
@@ -314,11 +383,32 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
         scroll-snap-align: start;
     }
 }
+
+
+
+@media (max-width: 480px) {
+    #appBrandNameDisplay {
+        font-size: 16px; /* Fixed 20px size on mobile */
+        max-width: 150px;
+    }
+}
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
 
 <div id="notification" class="notification-banner"></div>
+
+
+
+
+
 
 <div class="top-menu-bar">
     <div class="top-menu-content">
@@ -326,13 +416,20 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
             <img id="appLogo" src="https://bucket.mlcdn.com/a/3336/3336910/images/fa62e06dd2b6ed2d1d9e77e5dd944bef2904d5d1.png" alt="App Logo">
             <span id="appBrandNameDisplay">Easy Listings</span>
         </div>
-        <div class="top-menu-actions">
+        
+
+<div class="top-menu-actions">
             <div class="fab" id="settingsBtn" title="Settings"><i class="fas fa-cog"></i></div>
             <div class="fab" id="supportBtn" title="Support" onclick="window.open('https://helpcenter.easylistings.website', '_blank')"><i class="fa fa-info-circle"></i></div>
             <div class="fab" id="darkModeToggle" title="Toggle Theme"><i class="fas fa-moon"></i></div>
         </div>
     </div>
 </div>
+
+
+
+
+
 
 <header class="header-banner" id="mainHeader">
     <div class="header-content">
@@ -349,6 +446,12 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
     </div>
 </header>
 
+
+
+
+
+
+
 <main class="container">
     <div class="tag-filters" id="tagFilters"></div>
     <div class="content-wrapper">
@@ -363,13 +466,34 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
         <h3>Let's get in touch!</h3>
         <a href="#" id="getInTouchBtn" class="btn btn-secondary">Contact via WhatsApp</a>
     </div>
-    <div id="mapContainer"></div>
+    
+
+
+
+
+
+<div id="mapContainer"></div>
 </main>
+
+
+
+
+
+
 
 <footer class="footer" id="mainFooter"></footer>
 <button id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
+
+
+
+
+
+
+
 <!-- MODALS -->
+
+
 <div id="loginModal" class="modal">
     <div class="modal-content">
         <span class="modal-close">&times;</span>
@@ -380,15 +504,23 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
             <div class="form-group"><label for="loginPassword">Password</label><input type="password" id="loginPassword" required></div>
             <button type="submit" class="btn" style="width: 100%;">Confirm Admin Access</button>
         </form>
+
+
         <div id="lifetimeAccessBtnContainer" style="display:none; margin-top: 1rem;"></div>
     </div>
 </div>
+
+
+
+
+
+
 
 <div id="setupModal" class="modal">
     <div class="modal-content">
         <span class="modal-close">&times;</span>
         <h3>Let's Get You Started! 🎉</h3>
-        <p>Your account is approved. Complete your profile to launch your directory.</p>
+        <p>Your account is approved. Complete your profile to launch your directory.</p><br>
         <form id="setupForm">
             <input type="hidden" id="setupEmail">
             <div class="profile-pic-uploader"><label for="setupProfilePic" class="profile-pic-preview" id="setupProfilePicPreview"><i class="fas fa-camera"></i></label><input type="file" id="setupProfilePic" accept="image/*"></div>
@@ -407,17 +539,35 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
     </div>
 </div>
 
-<div id="settingsModal" class="modal">
+
+
+
+
+
+
+
+
+
+    
+    
+    <div id="settingsModal" class="modal">
     <div class="modal-content">
         <span class="modal-close" data-modal-id="settingsModal">&times;</span>
         <h3>Settings</h3>
         <div class="settings-profile">
             <div id="settingsProfilePic" class="profile-pic-container"><i class="fas fa-user"></i></div>
             <div>
+
+
+                
                 <h4>Welcome, <span id="settingsUsernameDisplay">Admin</span>! 🎉</h4>
                 <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">You have access to all administrative features.</p>
             </div>
         </div>
+
+
+
+        
         <div class="form-group">
             <label for="shareableUrl">Your Shareable Listings URL</label>
             <div class="share-url-container">
@@ -425,24 +575,98 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
                 <button id="copyShareableUrlBtn" class="btn" title="Copy URL"><i class="fas fa-copy"></i></button>
             </div>
         </div>
-        <hr>
-        <h4>Contact Settings</h4>
-        <div class="form-group"><label for="settingsWhatsappNumber">WhatsApp Phone Number</label><input type="tel" id="settingsWhatsappNumber"></div>
-        <div class="form-group"><label for="settingsWhatsappMessage">Default WhatsApp Message</label><textarea id="settingsWhatsappMessage" rows="3"></textarea></div>
-        <hr>
-        <div id="whiteLabelSettings" style="display: none;">
-            <h4>White Label Settings</h4>
-            <div class="toggle-container">
-                <label class="toggle-switch">
-                    <input type="checkbox" id="enableLeadForm">
-                    <span class="slider"></span>
-                </label>
-                <span>Enable Lead Capture Form (replaces WhatsApp button)</span>
-            </div>
+
+
+
+        
+        <div class="form-group">
+            <label for="settingsUsername">Username</label>
+            <input type="text" id="settingsUsername">
         </div>
+        <div class="form-group">
+            <label for="settingsProfilePicUrl">Profile Picture URL</label>
+            <input type="text" id="settingsProfilePicUrl" placeholder="https://example.com/image.png">
+             <p class="field-instructions">For best results, use a direct image URL from a hosting service like Imgur.</p>
+        </div>
+        
+        
+        <hr>
+        <h4>Branding</h4>
+        <div class="form-group">
+            <label for="appBrandName">Brand Name</label>
+            <input type="text" id="appBrandName">
+        </div>
+
+        
+        <div class="form-group">
+            <label for="appLogoUrl">App Logo URL</label>
+            <input type="text" id="appLogoUrl" placeholder="https://example.com/logo.png">
+            <p class="field-instructions">For best results, use a direct image URL from a hosting service like Imgur.</p>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="bannerImageUrl">Header Banner Image URL</label>
+            <input type="text" id="bannerImageUrl" placeholder="https://example.com/banner.jpg">
+            <p class="field-instructions">Recommended size: 1200×400px.</p>
+        </div>
+        <hr>
+        
+        
+        <h4>Contact & Socials</h4>
+        
+        <div class="form-group"><label for="settingsWhatsappNumber">WhatsApp Phone Number</label><input type="tel" id="settingsWhatsappNumber" placeholder="e.g. 18291234567"></div>
+        <div class="form-group"><label for="settingsWhatsappMessage">Default WhatsApp Message</label><textarea id="settingsWhatsappMessage" rows="3" placeholder="Hello, I'm interested in the property with ID: [PropertyID]."></textarea></div>
+         <div class="form-group">
+             
+            <label for="instagramUrl">Instagram URL</label>
+            <input type="text" id="instagramUrl" placeholder="https://instagram.com/username">
+        </div>
+        <div class="form-group">
+            <label for="facebookUrl">Facebook URL</label>
+            <input type="text" id="facebookUrl" placeholder="https://facebook.com/username">
+        </div>
+<label for="linkedinUrl">LinkedIn URL</label>
+            <input type="text" id="linkedinUrl" placeholder="https://linkedin.com/username">
+        </div>
+        <div class="form-group">
+            <label for="youtubeUrl">YouTube URL</label>
+            <input type="text" id="youtubeUrl" placeholder="https://facebook.com/username">
+        </div>
+     
+    <div class="form-group">
+            <label for="xUrl">X URL</label>
+            <input type="text" id="xUrl" placeholder="https://x.com/username">
+        </div>
+
+  <div class="form-group">
+            <label for="telegramUrl">Telegram URL</label>
+            <input type="text" id="telegramUrl" placeholder="https://t.me/username">
+        </div>
+
+
+        
+
+  
+        <hr>
+        <h4>Location</h4>
+         <div class="form-group">
+            <label for="googleMapsUrl">Google Maps URL (Optional)</label>
+            <input type="text" id="googleMapsUrl" placeholder="https://goo.gl/maps/... (Embed URL)">
+        </div>
+
+        
+        <hr>
         <button id="saveSettingsBtn" class="btn" style="width: 100%;">Save Customizations</button>
     </div>
 </div>
+
+
+
+
+
+
+
 
 <div id="editCardModal" class="modal">
     <div class="modal-content">
@@ -456,6 +680,10 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
         <div class="form-group">
             <label for="listingSubtitle">Subtitle</label>
             <input type="text" id="listingSubtitle">
+        </div>
+         <div class="form-group">
+            <label for="listingBadge">Badge Text (Optional)</label>
+            <input type="text" id="listingBadge" placeholder="e.g., New, Sold, For Rent">
         </div>
         <div class="form-group">
             <label for="listingDescription">Description</label>
@@ -478,9 +706,13 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
             <input type="text" id="listingCategoryDescription" placeholder="A brief description for this group of listings.">
         </div>
         <div class="form-group">
-            <label for="listingTags">Tags</label>
-            <input type="text" id="listingTags">
-            <div class="recommendations" id="tagRecommendations"></div>
+            <label for="listingTags">Tags (comma-separated)</label>
+            <input type="text" id="listingTags" placeholder="e.g. 2 Bedrooms, Furnished, Garage">
+        </div>
+         <div class="form-group">
+            <label for="listingImageUrls">Image URLs (one per line)</label>
+            <textarea id="listingImageUrls" rows="5" placeholder="https://example.com/image1.png\nhttps://example.com/image2.png"></textarea>
+            <p class="field-instructions">Add multiple image URLs for a carousel effect.</p>
         </div>
         <hr>
         <h4>Secondary CTA Button (Optional)</h4>
@@ -488,6 +720,8 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
             <label for="secondaryCtaText">Button Text</label>
             <input type="text" id="secondaryCtaText">
         </div>
+
+        
         <div class="form-group">
             <label for="secondaryCtaLink">Button Link</label>
             <input type="text" id="secondaryCtaLink">
@@ -495,6 +729,13 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
         <button type="submit" id="saveListingBtn" class="btn" style="width:100%">Save Listing</button>
     </div>
 </div>
+
+
+
+
+
+
+
 
 <div id="leadCaptureModal" class="modal">
     <div class="modal-content">
@@ -523,6 +764,13 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
     </div>
 </div>
 
+
+
+
+
+
+
+
 <div id="confirmationModal" class="modal">
     <div class="modal-content" style="max-width: 400px;">
         <h3 id="confirmationTitle">Are you sure?</h3>
@@ -549,7 +797,7 @@ hr { border: 0; border-top: 1px solid var(--border-color); margin: 2rem 0; }
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // --- CONFIGURATION ---
-    const ADMIN_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFHCC9E0etIqCxmbBfWfXBAN6V5w_3oguWA-HaseHHGeaSiPQQ2KtDEIR-LmnuktF60A/exec';
+    const ADMIN_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwR-nbqDowLqTGeF1PyVJo4qPCBc1kTThucI95J7T1oMdstRAxzLTdQlP8xwz5nDFmx2g/exec';
     const LIFETIME_DEAL_URL = 'https://your-lifetime-deal-url.com';
 
     // --- STATE ---
@@ -632,15 +880,20 @@ document.addEventListener('DOMContentLoaded', function() {
         renderGetInTouchBlock(mockPublicUserData);
         loadHomePage(); // Also load the listings
     }
+
+
+
+
     
     // --- UI & CUSTOMIZATION ---
     function applyCustomization(config) {
         appConfig = config;
-        const brandName = config.brandname || 'Easy Listings';
+        const brandName = config.brandName || 'Easy Listings';
         appBrandNameDisplay.textContent = brandName;
+        document.getElementById('appLogo').src = config.logoURL || 'https://bucket.mlcdn.com/a/3336/3336910/images/fa62e06dd2b6ed2d1d9e77e5dd944bef2904d5d1.png';
         const animationTexts = [`${brandName}`, "Our Listings Page"];
         typeWriterAnimation(animationTexts);
-        mainHeader.style.backgroundImage = `url(${config.bannerimageurl || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80'})`;
+        mainHeader.style.backgroundImage = `url(${config.bannerImageUrl || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80'})`;
         renderFooter(config);
     }
     
@@ -684,7 +937,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function renderGetInTouchBlock(config) {
         getInTouchBlock.style.display = 'block';
-        document.getElementById('getInTouchPic').style.backgroundImage = `url(${config.profilePicUrl || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80'})`;
+        document.getElementById('getInTouchPic').style.backgroundImage = `url(${config.profilePicURL || 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80'})`;
         const whatsappUrl = `https://wa.me/${config.whatsappNumber || ''}`;
         document.getElementById('getInTouchBtn').href = whatsappUrl;
     }
@@ -709,7 +962,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderListings(listings) {
         listingsContainer.innerHTML = '';
         
-        // Clear all existing carousel intervals
         Object.values(carouselIntervals).forEach(interval => clearInterval(interval));
         carouselIntervals = {};
         
@@ -769,13 +1021,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const tagsHTML = (listing.tags || []).map(tag => `<span class="card-tag">${tag}</span>`).join('');
 
         let primaryCtaHTML = '';
-        if (appConfig.enableLeadForm && appConfig.status === 'White Label') {
-            primaryCtaHTML = `<button class="btn btn-primary lead-btn">Inquire Now</button>`;
-        } else if (appConfig.whatsappNumber) {
+        if (appConfig.whatsappNumber) {
             const message = (appConfig.whatsappMessage || "Hello, I'm interested in the property with ID: [PropertyID].").replace('[PropertyID]', listing.propertyId);
             const whatsappUrl = `https://wa.me/${appConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
             primaryCtaHTML = `<a href="${whatsappUrl}" target="_blank" class="btn btn-secondary">Contact via WhatsApp</a>`;
         }
+
+        const badgeHTML = listing.status ? `<div class="carousel-badge">${listing.status}</div>` : '';
 
         card.innerHTML = `
             <div class="card-admin-controls">
@@ -786,7 +1038,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="carousel-track">
                     ${(listing.images && listing.images.length > 0 ? listing.images : ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=60']).map(img => `<div class="carousel-slide"><img src="${img}" alt="${listing.title}" onerror="this.src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=60'"></div>`).join('')}
                 </div>
-                <div class="carousel-badge">${listing.status}</div>
+                ${badgeHTML}
             </div>
             <div class="card-body">
                 <h3 class="card-title">${listing.title}</h3>
@@ -807,23 +1059,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const track = carousel.querySelector('.carousel-track');
             const slides = Array.from(track.children);
             if (slides.length <= 1) return;
-
             let currentIndex = 0;
-            
-            // Clear any existing interval for this carousel
             if (carouselIntervals[index]) {
                 clearInterval(carouselIntervals[index]);
             }
-            
             carouselIntervals[index] = setInterval(() => {
                 currentIndex = (currentIndex + 1) % slides.length;
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
             }, 3000);
-
-            carousel.addEventListener('mouseenter', () => {
-                clearInterval(carouselIntervals[index]);
-            });
-            
+            carousel.addEventListener('mouseenter', () => clearInterval(carouselIntervals[index]));
             carousel.addEventListener('mouseleave', () => {
                 carouselIntervals[index] = setInterval(() => {
                     currentIndex = (currentIndex + 1) % slides.length;
@@ -833,6 +1077,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
     // --- AUTH & ONBOARDING ---
     async function handleLogin(e) {
         e.preventDefault();
@@ -840,9 +1085,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('loginPassword').value;
         showNotification('Authenticating...', 'info');
 
-        // Secret Access User
-        if (email === 'bebell.digitalsolutions@gmail.com' && password === 'Bebell/25') {
-            grantAdminAccess({ brandname: 'Easy Listings Admin', status: 'Secret' });
+        if (email.toLowerCase() === 'bebell.digitalsolutions@gmail.com' && password === 'Bebell/25') {
+            grantAdminAccess({ brandName: 'Easy Listings Admin', status: 'Secret' });
             hideNotification();
             return;
         }
@@ -851,30 +1095,23 @@ document.addEventListener('DOMContentLoaded', function() {
             const response = await fetch(ADMIN_SCRIPT_URL, {
                 method: 'POST',
                 mode: 'cors',
-                headers: {
-                    'Content-Type': 'text/plain;charset=utf-8',
-                },
-                body: JSON.stringify({
-                    action: 'handleLogin',
-                    data: { email, password }
-                })
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify({ action: 'handleLogin', data: { email, password } })
             });
-
             const result = await response.json();
             
             if(loginMessage) loginMessage.innerHTML = result.message;
 
-            if (result.status === 'Active' || result.status === 'Published') {
+            if (result.status === 'Active') {
                 grantAdminAccess(result.userData);
-            } else if (result.status === 'setup_required') {
+            } else if (result.status === 'Published') {
                 closeModal(loginModal);
                 document.getElementById('setupEmail').value = email;
                 openModal(setupModal);
                 if(window.triggerConfetti) window.triggerConfetti();
             } else if (result.status === 'Blocked') {
-                 loginMessage.innerHTML = `Your account is blocked. <a href="${LIFETIME_DEAL_URL}" target="_blank">Purchase a license</a> to continue.`;
+                 loginMessage.innerHTML = `🚨 Your account is restricted. Please <a href="${LIFETIME_DEAL_URL}" target="_blank">Purchase a license</a> to access your account.`;
             }
-
         } catch (error) {
             if(loginMessage) loginMessage.textContent = '⚠️ Connection error. Please try again.';
             console.error('Login Error:', error);
@@ -885,14 +1122,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function grantAdminAccess(userData) {
         isLoggedIn = true;
+        appConfig = userData; // Store user data globally
         document.body.classList.add('admin-logged-in');
         closeModal(loginModal);
         showNotification('Login Successful!', 'success');
         if(window.triggerConfetti) window.triggerConfetti();
         applyCustomization(userData);
-        if (userData.status === 'White Label') {
-            document.getElementById('whiteLabelSettings').style.display = 'block';
-        }
         filterAndRenderListings(); // Re-render to show admin controls
     }
     
@@ -900,8 +1135,67 @@ document.addEventListener('DOMContentLoaded', function() {
     function openModal(modal) { if(modal) modal.classList.add('active'); }
     function closeModal(modal) { if(modal) modal.classList.remove('active'); }
 
+    function populateSettingsModal(config) {
+        document.getElementById('settingsUsername').value = config.username || '';
+        document.getElementById('settingsProfilePicUrl').value = config.profilePicURL || '';
+        document.getElementById('appBrandName').value = config.brandName || '';
+        document.getElementById('appLogoUrl').value = config.logoURL || '';
+        document.getElementById('bannerImageUrl').value = config.bannerImageUrl || '';
+        document.getElementById('settingsWhatsappNumber').value = config.whatsappNumber || '';
+        document.getElementById('settingsWhatsappMessage').value = config.whatsappMessage || '';
+        document.getElementById('instagramUrl').value = config.instagramURL || '';
+        document.getElementById('facebookUrl').value = config.facebookURL || '';
+        document.getElementById('googleMapsUrl').value = config.googleMapsUrl || '';
+        document.getElementById('shareableUrl').value = config.shareableURL || '';
+    }
+
+    async function handleSaveSettings(e) {
+        e.preventDefault();
+        showNotification('Saving settings...', 'info');
+        const settingsData = {
+            userId: appConfig.userID, // Make sure userID is in appConfig
+            username: document.getElementById('settingsUsername').value,
+            profilePicURL: document.getElementById('settingsProfilePicUrl').value,
+            brandName: document.getElementById('appBrandName').value,
+            logoURL: document.getElementById('appLogoUrl').value,
+            bannerImageUrl: document.getElementById('bannerImageUrl').value,
+            whatsappNumber: document.getElementById('settingsWhatsappNumber').value,
+            whatsappMessage: document.getElementById('settingsWhatsappMessage').value,
+            instagramURL: document.getElementById('instagramUrl').value,
+            facebookURL: document.getElementById('facebookUrl').value,
+            googleMapsUrl: document.getElementById('googleMapsUrl').value,
+        };
+
+        try {
+             const response = await fetch(ADMIN_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'cors',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify({ action: 'updateSettings', data: settingsData })
+            });
+            const result = await response.json();
+            if (result.status === 'success') {
+                showNotification('Settings saved successfully!', 'success');
+                appConfig = {...appConfig, ...settingsData}; // Update local config
+                applyCustomization(appConfig);
+                closeModal(settingsModal);
+            } else {
+                throw new Error(result.message);
+            }
+        } catch (error) {
+            showNotification(`Error saving settings: ${error.message}`, 'error');
+        }
+    }
+
     function setupEventListeners() {
-        document.getElementById('settingsBtn').addEventListener('click', () => isLoggedIn ? openModal(settingsModal) : openModal(loginModal));
+        document.getElementById('settingsBtn').addEventListener('click', () => {
+            if (isLoggedIn) {
+                populateSettingsModal(appConfig);
+                openModal(settingsModal);
+            } else {
+                openModal(loginModal);
+            }
+        });
         document.getElementById('addNewEntryBtn').addEventListener('click', () => isLoggedIn ? openModal(document.getElementById('editCardModal')) : openModal(loginModal));
         document.getElementById('darkModeToggle').addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -910,6 +1204,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         document.querySelectorAll('.modal-close').forEach(btn => btn.addEventListener('click', () => closeModal(btn.closest('.modal'))));
         document.getElementById('loginForm').addEventListener('submit', handleLogin);
+        document.getElementById('saveSettingsBtn').addEventListener('click', handleSaveSettings);
 
         tagFiltersContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('tag-filter-btn')) {
