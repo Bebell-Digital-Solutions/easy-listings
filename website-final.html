@@ -218,13 +218,16 @@
 
 
         .accent-btn {
-    background-color: var(--primary); /* Semi-transparent primary color */
+    background-color: #c71575;
     color: white;
     transition: all 0.3s ease;
+            
 }
 
 .accent-btn:hover {
-    background-color: #d275b2; /* Slightly less transparent on hover */
+    background-color: var(--primary);
+    transform: translateY(-3px); 
+            box-shadow: 0 10px 20px -10px var(--primary); 
 }
 
         .card {
@@ -941,10 +944,10 @@
     
     <a href="https://bebell-digital-solutions.github.io/easy-listings/v04" 
        class="accent-btn text-lg font-bold px-8 py-4 rounded-lg w-full sm:w-auto text-center flex items-center justify-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
         </svg>
         See It Live On Any Device
     </a>
